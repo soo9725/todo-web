@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>일정을 끌어서 옮기기</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0;font-family:-apple-system,"Apple SD Gothic Neo",system-ui,sans-serif}
+button{font-family:inherit}
+</style>
+</helmet>
+<div style="position:relative;width:390px;height:844px;box-sizing:border-box;background:#ffffff;color:#1c1c1e;overflow:hidden">
+
+<div style="padding:20px 16px 10px 16px">
+<h1 style="margin:0;font-size:26px;font-weight:700;letter-spacing:-0.5px">2026년 10월</h1>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));height:24px;align-items:center;text-align:center;font-size:11px;font-weight:600;color:#6b6b70">
+<span style="color:#c0392b">일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span style="color:#2b62c0">토</span>
+</div>
+
+<div style="position:relative;height:150px;border-top:1px solid #e5e5ea;background-image:linear-gradient(to right,transparent calc(100% - 1px),#efeff4 calc(100% - 1px));background-size:calc(100% / 7) 100%">
+<div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));height:22px;font-size:11px">
+<span style="padding:4px 0 0 5px">18</span><span style="padding:4px 0 0 5px">19</span><span style="padding:4px 0 0 5px">20</span><span style="padding:4px 0 0 5px">21</span><span style="padding:4px 0 0 5px">22</span><span style="padding:4px 0 0 5px">23</span><span style="padding:4px 0 0 5px">24</span>
+</div>
+</div>
+
+<div style="position:relative;height:150px;border-top:1px solid #e5e5ea;border-bottom:1px solid #e5e5ea;background-image:linear-gradient(to right,transparent calc(100% - 1px),#efeff4 calc(100% - 1px));background-size:calc(100% / 7) 100%">
+<div style="position:absolute;left:calc(100% / 7 * 2);top:0;width:calc(100% / 7);height:100%;box-sizing:border-box;border:2px solid #007aff;border-radius:6px;background:#e8f1ff"></div>
+<div style="position:relative;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));height:22px;font-size:11px">
+<span style="padding:4px 0 0 5px">25</span><span style="padding:4px 0 0 5px">26</span><span style="padding:4px 0 0 5px;color:#007aff;font-weight:700">27</span><span style="padding:4px 0 0 5px">28</span><span style="padding:4px 0 0 5px">29</span><span style="padding:4px 0 0 5px">30</span><span style="padding:4px 0 0 5px">31</span>
+</div>
+<div style="position:relative;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));grid-auto-rows:18px;row-gap:3px;padding:0 1px">
+<div style="grid-column:1;grid-row:1;height:18px;box-sizing:border-box;border:1.5px dashed #8a6a00;border-radius:4px;background:transparent"></div>
+<div style="grid-column:1;grid-row:2;display:flex;align-items:center;height:18px;box-sizing:border-box;padding:0 4px;border-radius:4px;font-size:10px;color:#1c1c1e;min-width:0;background:#b5cedf"><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">분기 목표</span></div>
+<div style="grid-column:3;grid-row:2;display:flex;align-items:center;height:18px;box-sizing:border-box;padding:0 4px;border-radius:4px;font-size:10px;color:#1c1c1e;min-width:0;background:#b5cedf"><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">14:00 거래처</span></div>
+<div style="grid-column:5;grid-row:1;display:flex;align-items:center;height:18px;box-sizing:border-box;padding:0 4px;border-radius:4px;font-size:10px;color:#1c1c1e;min-width:0;background:#c5c6c7"><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">15:00 주간보고</span></div>
+</div>
+<div style="position:absolute;left:96px;top:40px;display:flex;align-items:center;gap:6px;height:32px;padding:0 12px;border-radius:9px;background:#f0dd9d;color:#1c1c1e;font-size:14px;box-shadow:0 10px 24px rgba(0,0,0,0.25)"><span style="width:8px;height:8px;border-radius:50%;background:#8a6a00"></span>09:30 팀 미팅</div>
+</div>
+
+<div style="margin:18px 16px 0 16px;padding:14px;border-radius:12px;background:#f2f2f7;font-size:14px;line-height:1.55;color:#3c3c43">
+놓으면 <b style="color:#1c1c1e">10월 27일 (화)</b>로 옮겨져요. 시간과 색은 그대로 유지돼요.<br>
+반복 일정이면 놓은 뒤에 "이 일정만 / 앞으로 전체"를 물어봐요.<br>
+다음 달로 옮기려면 화면 가장자리로 끌고 가면 달이 넘어가요.
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

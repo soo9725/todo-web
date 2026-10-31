@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>삭제 확인창</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0;font-family:-apple-system,"Apple SD Gothic Neo",system-ui,sans-serif}
+button{font-family:inherit}
+</style>
+</helmet>
+<div style="position:relative;width:390px;height:844px;box-sizing:border-box;background:#ffffff;color:#1c1c1e;overflow:hidden">
+
+<div style="position:absolute;left:0;top:0"><dc-import name="List" hint-size="390px,844px"></dc-import></div>
+<div style="position:absolute;left:0;top:0;right:0;bottom:0;background:rgba(0,0,0,0.4)"></div>
+
+<div style="position:absolute;left:60px;right:60px;top:300px;border-radius:28px;background:#f9f9fb;overflow:hidden;text-align:center">
+<div style="padding:20px 16px 16px 16px">
+<div style="font-size:17px;font-weight:700">일정을 삭제할까요?</div>
+<div style="margin-top:6px;font-size:13px;line-height:1.45;color:#3c3c43">‘팀 미팅’ (10월 25일 09:30)이 삭제돼요. 삭제한 일정은 되돌릴 수 없어요.</div>
+</div>
+<div style="display:flex;border-top:1px solid #d1d1d6">
+<button style="flex:1;height:48px;border:0;border-right:1px solid #d1d1d6;background:transparent;font-size:17px;color:#007aff">취소</button>
+<button style="flex:1;height:48px;border:0;background:transparent;font-size:17px;font-weight:700;color:#e5484d">삭제</button>
+</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

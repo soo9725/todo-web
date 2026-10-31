@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>월간 캘린더</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0;font-family:-apple-system,"Apple SD Gothic Neo",system-ui,sans-serif}
+button{font-family:inherit}
+</style>
+</helmet>
+<div style="position:relative;width:390px;height:844px;box-sizing:border-box;background:#ffffff;color:#1c1c1e;display:flex;flex-direction:column;overflow:hidden">
+
+<div style="flex:none;height:62px;box-sizing:border-box;display:flex;align-items:flex-end;justify-content:center;padding-bottom:6px;background:rgba(60,60,67,0.07);font-size:11px;color:#6b6b70">상태 표시줄 영역 (시간, 와이파이, 배터리는 아이폰이 표시)</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:6px 14px 6px 16px;height:44px;box-sizing:content-box">
+<h1 style="margin:0;font-size:26px;font-weight:700;letter-spacing:-0.5px">2026년 10월</h1>
+<div style="display:flex;align-items:center;gap:4px">
+<button aria-label="이전 달" style="width:44px;height:44px;border:0;background:transparent;font-size:22px;color:#4a4d55">‹</button>
+<button style="height:32px;padding:0 12px;border:0;border-radius:16px;background:#e3e3e8;color:#4a4d55;font-size:13px;font-weight:600">오늘</button>
+<button aria-label="다음 달" style="width:44px;height:44px;border:0;background:transparent;font-size:22px;color:#4a4d55">›</button>
+</div>
+</div>
+
+<div style="margin:0 12px 6px 12px;display:flex;align-items:center;justify-content:space-between;height:36px;box-sizing:border-box;padding:0 6px 0 12px;border-radius:18px;background:#fff4e0;color:#7a4a00;font-size:13px"><span>마지막 백업이 8일 전이에요</span><button style="height:28px;padding:0 12px;border:0;border-radius:14px;background:#7a4a00;color:#ffffff;font-size:13px;font-weight:600">지금 백업</button></div>
+<div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));height:24px;align-items:center;text-align:center;font-size:11px;font-weight:600;color:#6b6b70">
+<span style="color:#c0392b">일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span style="color:#2b62c0">토</span>
+</div>
+
+<div style="flex:1;display:flex;flex-direction:column;min-height:0;padding-bottom:92px">
+
+<!-- 1주: 9/27 - 10/3 -->
+<div style="position:relative;flex:1;border-top:1px solid #e5e5ea;background-image:linear-gradient(to right,transparent calc(100% - 1px),#efeff4 calc(100% - 1px));background-size:calc(100% / 7) 100%">
+<div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));height:22px;font-size:11px;color:#1c1c1e">
+<span style="padding:4px 0 0 5px;color:#c7c7cc">27</span><span style="padding:4px 0 0 5px;color:#c7c7cc">28</span><span style="padding:4px 0 0 5px;color:#c7c7cc">29</span><span style="padding:4px 0 0 5px;color:#c7c7cc">30</span><span style="padding:4px 0 0 5px">1</span><span style="padding:4px 0 0 5px">2</span><span style="padding:4px 0 0 5px">3</span>
+</div>
+<div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));grid-auto-rows:18px;row-gap:3px;padding:0 1px">
+<div style="grid-column:5;grid-row:1;display:flex;align-items:center;gap:3px;height:18px;box-sizing:border-box;padding:0 4px;border-radius:4px;font-size:10px;color:#fff;min-width:0;background:#7b5cc4"><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">09:00 워크숍</span></div>
+<div style="grid-column:5;grid-row:2;display:flex;align-items:center;gap:3px;height:18px;box-sizing:border-box;padding:0 4px;border-radius:4px;font-size:10px;color:#fff;min-width:0;background:#596275"><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">15:00 주간보고</span></div>
+</div>
+</div>
+
+<!-- 2주: 10/4 - 10/10 -->
+<div style="position:relative;flex:1;border-top:1px solid #e5e5ea;background-image:linear-gradient(to right,transparent calc(100% - 1px),#efeff4 calc(100% - 1px));background-size:calc(100% / 7) 100%">
+<div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));height:22px;font-size:11px;color:#1c1c1e">
+<span style="padding:4px 0 0 5px">4</span><span style="padding:4px 0 0 5px">5</span><span style="padding:4px 0 0 5px">6</span><span style="padding:4px 0 0 5px">7</span><span style="padding:4px 0 0 5px">8</span><span style="padding:4px 0 0 5px">9</span><span style="padding:4px 0 0 5px">10</span>
+</div>
+<div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));grid-auto-rows:18px;row-gap:3px;padding:0 1px">
+<div style="grid-column:3 / span 2;grid-row:1;display:flex;align-items:center;gap:3px;height:18px;box-sizing:border-box;padding:0 4px;border-radius:4px;font-size:10px;color:#fff;min-width:0;background:#2f8f6b"><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">외부 교육</span></div>
+<div style="grid-column:5;grid-row:1;display:flex;align-items:center;gap:3px;height:18px;box-sizing:border-box;padding:0 4px;border-radius:4px;font-size:10px;color:#fff;min-width:0;background:#596275"><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">15:00 주간보고</span></div>
+</div>
+</div>
+
+<!-- 3주: 10/11 - 10/17 -->
+<div style="position:relative;flex:1;border-top:1px solid #e5e5ea;background-image:linear-gradient(to right,transparent calc(100% - 1px),#efeff4 calc(100% - 1px));background-size:calc(100% / 7) 100%">
+<div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));height:22px;font-size:11px;color:#1c1c1e">
+<span style="padding:4px 0 0 5px">11</span><span style="padding:4px 0 0 5px">12</span><span style="padding:4px 0 0 5px">13</span><span style="padding:4px 0 0 5px">14</span><span style="padding:4px 0 0 5px">15</span><span style="padding:4px 0 0 5px">16</span><span style="padding:4px 0 0 5px">17</span>
+</div>
+<div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));grid-auto-rows:18px;row-gap:3px;padding:0 1px">
+<div style="grid-column:3;grid-row:1;display:flex;align-items:center;gap:3px;height:18px;box-sizing:border-box;padding:0 4px;border-radius:4px;font-size:10px;color:#fff;min-width:0;background:#c44a78"><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">마케팅 자료</span></div>
+<div style="grid-column:5;grid-row:1;display:flex;align-items:center;gap:3px;height:18px;box-sizing:border-box;padding:0 4px;border-radius:4px;font-size:10px;color:#fff;min-width:0;background:#596275"><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">15:00 주간보고</span></div>
+</div>
+</div>
+
+<!-- 4주: 10/18 - 10/24 (완료 항목은 회색) -->
+<div style="position:relative;flex:1;border-top:1px solid #e5e5ea;background-image:linear-gradient(to right,transparent calc(100% - 1px),#efeff4 calc(100% - 1px));background-size:calc(100% / 7) 100%">
+<div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));height:22px;font-size:11px;color:#1c1c1e">
+<span style="padding:4px 0 0 5px">18</span><span style="padding:4px 0 0 5px">19</span><span style="padding:4px 0 0 5px">20</span><span style="padding:4px 0 0 5px">21</span><span style="padding:4px 0 0 5px">22</span><span style="padding:4px 0 0 5px">23</span><span style="padding:4px 0 0 5px">24</span>
+</div>
+<div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));grid-auto-rows:18px;row-gap:3px;padding:0 1px">
+<div style="grid-column:4;grid-row:1;display:flex;align-items:center;gap:3px;height:18px;box-sizing:border-box;padding:0 4px;border-radius:4px;font-size:10px;color:#6a6d75;min-width:0;background:#d1d3d8"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#4a4d55" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">14:00 면담</span></div>
+<div style="grid-column:5;grid-row:1;display:flex;align-items:center;gap:3px;height:18px;box-sizing:border-box;padding:0 4px;border-radius:4px;font-size:10px;color:#6a6d75;min-width:0;background:#d1d3d8"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#4a4d55" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">10:00 인수인계</span></div>
+<div style="grid-column:5;grid-row:2;display:flex;align-items:center;gap:3px;height:18px;box-sizing:border-box;padding:0 4px;border-radius:4px;font-size:10px;color:#6a6d75;min-width:0;background:#d1d3d8"><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;text-decoration:line-through">15:00 주간보고</span></div>
+</div>
+</div>
+
+<!-- 5주: 10/25 - 10/31 (오늘 10/25) -->
+<div style="position:relative;flex:1;border-top:1px solid #e5e5ea;background-image:linear-gradient(to right,transparent calc(100% - 1px),#efeff4 calc(100% - 1px));background-size:calc(100% / 7) 100%">
+<div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));height:22px;font-size:11px;color:#1c1c1e">
+<span style="padding:2px 0 0 3px"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:#4a4d55;color:#fff;font-weight:700">25</span></span><span style="padding:4px 0 0 5px">26</span><span style="padding:4px 0 0 5px">27</span><span style="padding:4px 0 0 5px">28</span><span style="padding:4px 0 0 5px">29</span><span style="padding:4px 0 0 5px">30</span><span style="padding:4px 0 0 5px">31</span>
+</div>
+<div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));grid-auto-rows:18px;row-gap:3px;padding:0 1px">
+<div style="grid-column:1;grid-row:1;display:flex;align-items:center;gap:3px;height:18px;box-sizing:border-box;padding:0 4px;border-radius:4px;font-size:10px;color:#fff;min-width:0;background:#2f8f6b"><span style="flex:none;width:6px;height:6px;border-radius:50%;background:#bdebd8"></span><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">09:30 팀 미팅</span></div>
+<div style="grid-column:1;grid-row:2;display:flex;align-items:center;gap:3px;height:18px;box-sizing:border-box;padding:0 4px;border-radius:4px;font-size:10px;color:#fff;min-width:0;background:#3b6fd4"><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">12:30 점심 약속</span></div>
+<div style="grid-column:1;grid-row:3;display:flex;align-items:center;gap:3px;height:18px;box-sizing:border-box;padding:0 4px;border-radius:4px;font-size:10px;color:#fff;min-width:0;background:#7b5cc4"><span style="flex:none;width:6px;height:6px;border-radius:50%;background:#dccfff"></span><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">분기 목표</span></div>
+<div style="grid-column:1;grid-row:4;font-size:10.5px;color:#6b6b70;padding-left:4px;line-height:18px">+3</div>
+
+<div style="grid-column:2 / span 3;grid-row:1;display:flex;align-items:center;gap:3px;height:18px;box-sizing:border-box;padding:0 4px;border-radius:4px;font-size:10px;color:#fff;min-width:0;background:#c46a1a"><span style="flex:none;width:6px;height:6px;border-radius:50%;background:#ffddb8"></span><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">부산 출장</span></div>
+<div style="grid-column:3;grid-row:2;display:flex;align-items:center;gap:3px;height:18px;box-sizing:border-box;padding:0 4px;border-radius:4px;font-size:10px;color:#fff;min-width:0;background:#3b6fd4"><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">14:00 거래처</span></div>
+
+<div style="grid-column:5;grid-row:1;display:flex;align-items:center;gap:3px;height:18px;box-sizing:border-box;padding:0 4px;border-radius:4px;font-size:10px;color:#fff;min-width:0;background:#596275"><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">15:00 주간보고</span></div>
+<div style="grid-column:6;grid-row:1;display:flex;align-items:center;gap:3px;height:18px;box-sizing:border-box;padding:0 4px;border-radius:4px;font-size:10px;color:#fff;min-width:0;background:#3b6fd4"><span style="flex:none;width:6px;height:6px;border-radius:50%;background:#bfd3ff"></span><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">월말 보고서</span></div>
+</div>
+</div>
+
+</div>
+
+<nav style="position:absolute;left:16px;right:16px;bottom:20px;height:64px;box-sizing:border-box;padding:6px;display:flex;align-items:center;border-radius:32px;background:rgba(249,249,251,0.72);-webkit-backdrop-filter:blur(24px) saturate(180%);backdrop-filter:blur(24px) saturate(180%);box-shadow:0 8px 28px rgba(0,0,0,0.14),inset 0 0 0 0.5px rgba(255,255,255,0.9)">
+<button style="flex:1;border:0;background:rgba(120,120,128,0.14);border-radius:26px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;height:52px;font-size:11px;color:#4a4d55;font-weight:600">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a4d55" stroke-width="2" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>캘린더</button>
+<button style="flex:1;border:0;background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;height:52px;font-size:11px;color:#6b6b70">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b6b70" stroke-width="2" aria-hidden="true"><path d="M8 7h12M8 12h12M8 17h12"/><circle cx="4.5" cy="7" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="17" r="1"/></svg>목록</button>
+<div style="flex:1;display:flex;justify-content:center"><button aria-label="새 일정 추가" style="width:48px;height:48px;border:0;border-radius:24px;background:#4a4d55;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(74,77,85,0.35)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button></div>
+<button style="flex:1;border:0;background:transparent;display:flex;flex-direction:column;align-items:center;gap:3px;height:48px;font-size:11px;color:#6b6b70">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b6b70" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7.5 10.5L12 15l4.5-4.5M5 19h14"/></svg>백업</button>
+<button style="flex:1;border:0;background:transparent;display:flex;flex-direction:column;align-items:center;gap:3px;height:48px;font-size:11px;color:#6b6b70">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b6b70" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>설정</button>
+</nav>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

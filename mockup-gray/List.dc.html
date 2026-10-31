@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>목록 탭 예정</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0;font-family:-apple-system,"Apple SD Gothic Neo",system-ui,sans-serif}
+button{font-family:inherit}
+</style>
+</helmet>
+<div style="position:relative;width:390px;height:844px;box-sizing:border-box;background:#f2f2f7;color:#1c1c1e;display:flex;flex-direction:column;overflow:hidden">
+
+<div style="padding:20px 16px 8px 16px">
+<h1 style="margin:0 0 10px 0;font-size:26px;font-weight:700;letter-spacing:-0.5px">목록</h1>
+<div style="display:flex;padding:2px;border-radius:16px;background:#e3e3e8;height:34px;box-sizing:border-box">
+<button style="flex:1;border:0;border-radius:14px;background:#ffffff;font-size:14px;font-weight:600;color:#1c1c1e;box-shadow:0 1px 3px rgba(0,0,0,0.12)">예정</button>
+<button style="flex:1;border:0;border-radius:14px;background:transparent;font-size:14px;color:#3c3c43">완료</button>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-top:8px">
+<button aria-label="이전 달" style="width:44px;height:44px;border:0;background:transparent;font-size:22px;color:#4a4d55">‹</button>
+<span style="font-size:17px;font-weight:700">2026년 10월</span>
+<button aria-label="다음 달" style="width:44px;height:44px;border:0;background:transparent;font-size:22px;color:#4a4d55">›</button>
+</div>
+</div>
+
+<div style="flex:1;overflow:hidden;padding:0 14px 96px 14px;display:flex;flex-direction:column;gap:5px">
+
+<div style="padding:4px 4px 2px 4px;font-size:13px;font-weight:700;color:#6b6b70">오늘, 10월 25일 (일)</div>
+<div style="display:flex;align-items:center;gap:4px;height:44px;box-sizing:border-box;padding:0 12px 0 2px;border-radius:14px;background:#2f8f6b;color:#fff;font-size:15px"><button aria-label="완료로 표시" style="flex:none;width:40px;height:44px;border:0;padding:0;background:transparent;display:flex;align-items:center;justify-content:center"><span style="width:20px;height:20px;box-sizing:border-box;border-radius:50%;border:2px solid rgba(255,255,255,0.9)"></span></button><span style="flex:none;width:8px;height:8px;border-radius:50%;background:#bdebd8;margin-right:4px"></span>09:30 팀 미팅</div>
+<div style="display:flex;align-items:center;gap:4px;height:44px;box-sizing:border-box;padding:0 12px 0 2px;border-radius:14px;background:#3b6fd4;color:#fff;font-size:15px"><button aria-label="완료로 표시" style="flex:none;width:40px;height:44px;border:0;padding:0;background:transparent;display:flex;align-items:center;justify-content:center"><span style="width:20px;height:20px;box-sizing:border-box;border-radius:50%;border:2px solid rgba(255,255,255,0.9)"></span></button>12:30 점심 약속</div>
+<div style="display:flex;align-items:center;gap:4px;height:44px;box-sizing:border-box;padding:0 12px 0 2px;border-radius:14px;background:#7b5cc4;color:#fff;font-size:15px"><button aria-label="완료로 표시" style="flex:none;width:40px;height:44px;border:0;padding:0;background:transparent;display:flex;align-items:center;justify-content:center"><span style="width:20px;height:20px;box-sizing:border-box;border-radius:50%;border:2px solid rgba(255,255,255,0.9)"></span></button><span style="flex:none;width:8px;height:8px;border-radius:50%;background:#dccfff;margin-right:4px"></span>분기 목표 정리</div>
+<div style="display:flex;align-items:center;gap:4px;height:44px;box-sizing:border-box;padding:0 12px 0 2px;border-radius:14px;background:#c44a78;color:#fff;font-size:15px"><button aria-label="완료로 표시" style="flex:none;width:40px;height:44px;border:0;padding:0;background:transparent;display:flex;align-items:center;justify-content:center"><span style="width:20px;height:20px;box-sizing:border-box;border-radius:50%;border:2px solid rgba(255,255,255,0.9)"></span></button>경비 정산</div>
+
+<div style="padding:10px 4px 2px 4px;font-size:13px;font-weight:700;color:#6b6b70">10월 26일 (월) – 28일 (수)</div>
+<div style="display:flex;align-items:center;gap:4px;height:44px;box-sizing:border-box;padding:0 12px 0 2px;border-radius:14px;background:#c46a1a;color:#fff;font-size:15px"><button aria-label="완료로 표시" style="flex:none;width:40px;height:44px;border:0;padding:0;background:transparent;display:flex;align-items:center;justify-content:center"><span style="width:20px;height:20px;box-sizing:border-box;border-radius:50%;border:2px solid rgba(255,255,255,0.9)"></span></button><span style="flex:none;width:8px;height:8px;border-radius:50%;background:#ffddb8;margin-right:4px"></span><span style="flex:1">부산 출장</span><span style="font-size:12px;opacity:0.9">3일</span></div>
+
+<div style="padding:10px 4px 2px 4px;font-size:13px;font-weight:700;color:#6b6b70">10월 27일 (화)</div>
+<div style="display:flex;align-items:center;gap:4px;height:44px;box-sizing:border-box;padding:0 12px 0 2px;border-radius:14px;background:#3b6fd4;color:#fff;font-size:15px"><button aria-label="완료로 표시" style="flex:none;width:40px;height:44px;border:0;padding:0;background:transparent;display:flex;align-items:center;justify-content:center"><span style="width:20px;height:20px;box-sizing:border-box;border-radius:50%;border:2px solid rgba(255,255,255,0.9)"></span></button>14:00 거래처 미팅</div>
+
+<div style="padding:10px 4px 2px 4px;font-size:13px;font-weight:700;color:#6b6b70">10월 29일 (목)</div>
+<div style="display:flex;align-items:center;gap:4px;height:44px;box-sizing:border-box;padding:0 12px 0 2px;border-radius:14px;background:#596275;color:#fff;font-size:15px"><button aria-label="완료로 표시" style="flex:none;width:40px;height:44px;border:0;padding:0;background:transparent;display:flex;align-items:center;justify-content:center"><span style="width:20px;height:20px;box-sizing:border-box;border-radius:50%;border:2px solid rgba(255,255,255,0.9)"></span></button><span style="flex:1">15:00 주간보고</span><span style="font-size:12px;opacity:0.9">매주 반복</span></div>
+
+<div style="padding:10px 4px 0 4px;font-size:12px;color:#6b6b70;line-height:1.5">○를 누르면 완료 탭으로 넘어가요. 일정을 누르면 수정, 다른 날에 붙여넣기, 일정 삭제를 고를 수 있어요.</div>
+
+</div>
+
+<nav style="position:absolute;left:16px;right:16px;bottom:20px;height:64px;box-sizing:border-box;padding:6px;display:flex;align-items:center;border-radius:32px;background:rgba(249,249,251,0.72);-webkit-backdrop-filter:blur(24px) saturate(180%);backdrop-filter:blur(24px) saturate(180%);box-shadow:0 8px 28px rgba(0,0,0,0.14),inset 0 0 0 0.5px rgba(255,255,255,0.9)">
+<button style="flex:1;border:0;background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;height:52px;font-size:11px;color:#6b6b70">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b6b70" stroke-width="2" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>캘린더</button>
+<button style="flex:1;border:0;background:rgba(120,120,128,0.14);border-radius:26px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;height:52px;font-size:11px;color:#4a4d55;font-weight:600">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a4d55" stroke-width="2" aria-hidden="true"><path d="M8 7h12M8 12h12M8 17h12"/><circle cx="4.5" cy="7" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="17" r="1"/></svg>목록</button>
+<div style="flex:1;display:flex;justify-content:center"><button aria-label="새 일정 추가" style="width:48px;height:48px;border:0;border-radius:24px;background:#4a4d55;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(74,77,85,0.35)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button></div>
+<button style="flex:1;border:0;background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;height:52px;font-size:11px;color:#6b6b70">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b6b70" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7.5 10.5L12 15l4.5-4.5M5 19h14"/></svg>백업</button>
+<button style="flex:1;border:0;background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;height:52px;font-size:11px;color:#6b6b70">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b6b70" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.820-.33 1.650 1.650 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>설정</button>
+</nav>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

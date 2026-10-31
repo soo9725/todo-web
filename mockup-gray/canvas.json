@@ -1,0 +1,20 @@
+{
+  "v": 3,
+  "createdOnFiles": { "v": 1, "at": "2026-10-25T12:00:00Z" },
+  "title": "TODO 회색 강조색 시안",
+  "launch": { "view": "canvas" },
+  "pages": [],
+  "boards": {
+    "Main.dc.html": { "x": 0, "y": 0, "w": 390, "h": 844, "title": "1. 월간 캘린더 (회색 강조색)" },
+    "Entry.dc.html": { "x": 470, "y": 0, "w": 390, "h": 844, "title": "3. 일정 입력 (회색 강조색)" },
+    "List.dc.html": { "x": 940, "y": 0, "w": 390, "h": 844, "title": "6. 목록 예정 (회색 강조색)" },
+    "ListDone.dc.html": { "x": 1410, "y": 0, "w": 390, "h": 844, "title": "7. 목록 완료 (회색 강조색)" },
+    "Settings.dc.html": { "x": 1880, "y": 0, "w": 390, "h": 844, "title": "14. 설정 (회색 강조색)" }
+  },
+  "order": ["Main.dc.html", "Entry.dc.html", "List.dc.html", "ListDone.dc.html", "Settings.dc.html"],
+  "notes": {
+    "title": { "x": 0, "y": -240, "text": "회색 강조색 시안 (확정 아님, 파랑 버전과 비교용)", "kind": "title1", "maxW": 2270 },
+    "legend": { "x": 0, "y": 920, "w": 760, "fill": "gray", "size": "m", "text": "색 구분\n진한 회색 #4a4d55: 예전에 파랑이던 버튼 배경, + 버튼, 선택된 탭의 아이콘과 글씨, 오늘 날짜 원, ‹ › 화살표, 회색 글씨 버튼\n연한 회색 #e3e3e8: 예전에 연한 파랑이던 배경 (1번의 오늘 버튼)\n파랑 유지: 입력 칸 속 글씨 (3번의 시간, 날짜 칸)\n일정 색의 파랑 #3b6fd4: 강조색이 아니라 일정에 칠하는 색이라 그대로 파랑 (1번의 12:30 점심 약속과 14:00 거래처, 3번의 색 고르기 첫 번째 동그라미, 6번의 파랑 일정들)" }
+  },
+  "designSystems": []
+}

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>일정 수정</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0;font-family:-apple-system,"Apple SD Gothic Neo",system-ui,sans-serif}
+button,input,textarea{font-family:inherit}
+</style>
+</helmet>
+<div style="position:relative;width:390px;height:844px;overflow:hidden;background:#ffffff">
+<div style="position:absolute;left:0;top:0"><dc-import name="List" hint-size="390px,844px"></dc-import></div>
+<div style="position:absolute;left:0;top:0;right:0;bottom:0;background:rgba(0,0,0,0.32)"></div>
+<div style="position:absolute;left:8px;right:8px;top:44px;bottom:8px;box-sizing:border-box;background:#f2f2f7;color:#1c1c1e;overflow:hidden;padding:0 14px;border-radius:36px">
+
+<div style="display:flex;align-items:center;justify-content:space-between;height:56px;padding-top:12px;box-sizing:content-box">
+<button style="height:40px;padding:0 18px;border:0;border-radius:20px;background:rgba(255,255,255,0.85);box-shadow:0 2px 10px rgba(0,0,0,0.1);font-size:16px;color:#1c1c1e">취소</button>
+<h1 style="margin:0;font-size:17px;font-weight:700">일정 수정</h1>
+<button style="height:40px;padding:0 18px;border:0;border-radius:20px;background:#007aff;font-size:16px;font-weight:700;color:#ffffff">저장</button>
+</div>
+
+<div style="background:#ffffff;border-radius:24px;padding:0 14px">
+<label for="title" style="display:block;font-size:12px;color:#6b6b70;padding-top:8px">제목</label>
+<input id="title" value="주간보고" style="width:100%;box-sizing:border-box;height:36px;border:0;outline:0;font-size:17px;background:transparent;color:#1c1c1e;padding:0">
+</div>
+
+<div style="height:12px"></div>
+
+<div style="background:#ffffff;border-radius:24px;padding:0 14px">
+<div style="display:flex;align-items:center;justify-content:space-between;height:48px;border-bottom:1px solid #efeff4">
+<span style="font-size:16px">시간</span>
+<span style="display:flex;align-items:center;gap:10px"><input aria-label="시간" value="15:00" inputmode="numeric" style="width:72px;height:32px;box-sizing:border-box;border:0;outline:0;border-radius:8px;background:#f2f2f7;text-align:center;font-size:16px;color:#007aff"><button aria-pressed="true" aria-label="시간 사용" style="position:relative;width:48px;height:28px;border:0;border-radius:14px;background:#34c759;padding:0"><span style="position:absolute;top:2px;right:2px;width:24px;height:24px;border-radius:50%;background:#fff"></span></button></span>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;height:48px">
+<span style="font-size:16px">날짜</span>
+<input aria-label="날짜" value="2026.10.29" inputmode="numeric" style="width:112px;height:32px;box-sizing:border-box;border:0;outline:0;border-radius:8px;background:#f2f2f7;text-align:center;font-size:16px;color:#007aff">
+</div>
+</div>
+
+<div style="height:12px"></div>
+
+<div style="background:#ffffff;border-radius:24px;padding:0 14px">
+<div style="display:flex;align-items:center;justify-content:space-between;height:48px;border-bottom:1px solid #efeff4">
+<span style="font-size:16px">반복</span>
+<span style="font-size:16px;color:#007aff">매주 · 목요일 ›</span>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;height:48px">
+<span style="font-size:16px">반복 종료</span>
+<span style="font-size:16px;color:#6b6b70">계속 ›</span>
+</div>
+</div>
+<div style="padding:6px 4px 12px 4px;font-size:12px;color:#6b6b70">반복 일정을 저장하면 "이 일정만" 또는 "앞으로 전체"를 물어봐요.</div>
+
+<div style="background:#ffffff;border-radius:24px;padding:12px 14px">
+<div style="font-size:12px;color:#6b6b70;margin-bottom:10px">색</div>
+<div style="display:flex;gap:14px">
+<button aria-label="파랑" style="width:36px;height:36px;border-radius:50%;border:0;background:#b5cedf;padding:0;box-shadow:inset 0 0 0 1px rgba(0,0,0,0.08)"></button>
+<button aria-label="빨강" style="width:36px;height:36px;border-radius:50%;border:0;background:#efa6aa;padding:0;box-shadow:inset 0 0 0 1px rgba(0,0,0,0.08)"></button>
+<button aria-label="노랑" style="width:36px;height:36px;border-radius:50%;border:0;background:#f0dd9d;padding:0;box-shadow:inset 0 0 0 1px rgba(0,0,0,0.08)"></button>
+<button aria-label="회색, 선택됨" style="width:36px;height:36px;border-radius:50%;border:0;background:#c5c6c7;padding:0;box-shadow:0 0 0 3px #ffffff,0 0 0 5px #6b6e72"></button>
+</div>
+</div>
+
+<div style="height:12px"></div>
+
+<div style="background:#ffffff;border-radius:24px;padding:0 14px">
+<div style="display:flex;align-items:center;justify-content:space-between;height:52px">
+<span style="font-size:16px">중요</span>
+<button aria-pressed="false" aria-label="중요 표시" style="position:relative;width:48px;height:28px;border:0;border-radius:14px;background:#e5e5ea;padding:0"><span style="position:absolute;top:2px;left:2px;width:24px;height:24px;border-radius:50%;background:#fff"></span></button>
+</div>
+</div>
+
+<div style="height:12px"></div>
+
+<div style="background:#ffffff;border-radius:24px;padding:0 14px">
+<label for="memo" style="display:block;font-size:12px;color:#6b6b70;padding-top:8px">메모</label>
+<textarea id="memo" rows="2" style="width:100%;box-sizing:border-box;border:0;outline:0;resize:none;font-size:16px;background:transparent;color:#1c1c1e;padding:4px 0 10px 0">지난주 결과와 이번 주 계획</textarea>
+</div>
+
+<div style="height:20px"></div>
+
+<button style="width:100%;height:50px;border:0;border-radius:25px;background:#ffffff;font-size:17px;font-weight:600;color:#e5484d">일정 삭제</button>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

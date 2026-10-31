@@ -1,0 +1,210 @@
+{
+  "v": 3,
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-10-25T09:00:00Z"
+  },
+  "title": "TODO 웹 앱 목업 (파스텔 4색)",
+  "launch": {
+    "view": "canvas"
+  },
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 844,
+      "title": "1. 월간 캘린더"
+    },
+    "Sheet.dc.html": {
+      "x": 470,
+      "y": 0,
+      "w": 390,
+      "h": 844,
+      "title": "2. 날짜를 누르면 (그날 목록)"
+    },
+    "Entry.dc.html": {
+      "x": 940,
+      "y": 0,
+      "w": 390,
+      "h": 844,
+      "title": "3. 일정 입력"
+    },
+    "Picker.dc.html": {
+      "x": 1410,
+      "y": 0,
+      "w": 390,
+      "h": 844,
+      "title": "4. 날짜·시간 선택 (입력칸 + 아이폰 기본 선택기)"
+    },
+    "Edit.dc.html": {
+      "x": 1880,
+      "y": 0,
+      "w": 390,
+      "h": 844,
+      "title": "5. 일정 수정 (삭제 버튼)"
+    },
+    "List.dc.html": {
+      "x": 0,
+      "y": 964,
+      "w": 390,
+      "h": 844,
+      "title": "6. 목록 탭 예정 (월별)"
+    },
+    "ListDone.dc.html": {
+      "x": 470,
+      "y": 964,
+      "w": 390,
+      "h": 844,
+      "title": "7. 목록 탭 완료 (월별)"
+    },
+    "ListAction.dc.html": {
+      "x": 940,
+      "y": 964,
+      "w": 390,
+      "h": 844,
+      "title": "8. 목록에서 일정을 누르면"
+    },
+    "Empty.dc.html": {
+      "x": 1410,
+      "y": 964,
+      "w": 390,
+      "h": 844,
+      "title": "9. 일정이 없는 날"
+    },
+    "Welcome.dc.html": {
+      "x": 1880,
+      "y": 964,
+      "w": 390,
+      "h": 844,
+      "title": "10. 첫 실행 안내"
+    },
+    "Backup.dc.html": {
+      "x": 0,
+      "y": 1928,
+      "w": 390,
+      "h": 844,
+      "title": "11. 백업 탭"
+    },
+    "BackupShare.dc.html": {
+      "x": 470,
+      "y": 1928,
+      "w": 390,
+      "h": 844,
+      "title": "12. 백업: 공유 시트 (아이폰 화면)"
+    },
+    "BackupSave.dc.html": {
+      "x": 940,
+      "y": 1928,
+      "w": 390,
+      "h": 844,
+      "title": "13. 백업: 파일에 저장 (아이폰 화면)"
+    },
+    "Settings.dc.html": {
+      "x": 1410,
+      "y": 1928,
+      "w": 390,
+      "h": 844,
+      "title": "14. 설정"
+    },
+    "ContextMenu.dc.html": {
+      "x": 1880,
+      "y": 1928,
+      "w": 390,
+      "h": 844,
+      "title": "15. 캘린더 일정을 길게 누르면"
+    },
+    "MoveDrag.dc.html": {
+      "x": 0,
+      "y": 2892,
+      "w": 390,
+      "h": 844,
+      "title": "16. 끌어서 다른 날로 옮기기"
+    },
+    "Paste.dc.html": {
+      "x": 470,
+      "y": 2892,
+      "w": 390,
+      "h": 844,
+      "title": "17. 다른 날에 붙여넣기"
+    },
+    "ConfirmRepeat.dc.html": {
+      "x": 940,
+      "y": 2892,
+      "w": 390,
+      "h": 844,
+      "title": "18. 반복 일정 삭제 (확인은 이것 한 번)"
+    },
+    "ConfirmDelete.dc.html": {
+      "x": 1410,
+      "y": 2892,
+      "w": 390,
+      "h": 844,
+      "title": "19. 삭제 확인 (반복 아닌 일정)"
+    },
+    "Restore.dc.html": {
+      "x": 1880,
+      "y": 2892,
+      "w": 390,
+      "h": 844,
+      "title": "20. 마감 지난 일정 복구"
+    },
+    "OverdueMenu.dc.html": {
+      "x": 0,
+      "y": 3856,
+      "w": 390,
+      "h": 844,
+      "title": "21. 마감 지난 일정을 길게 누르면 (삭제 → 19번)"
+    },
+    "MainBannerClosed.dc.html": {
+      "x": 470,
+      "y": 3856,
+      "w": 390,
+      "h": 844,
+      "title": "22. 백업 배너를 닫은 뒤 (그날은 다시 안 뜨고, 다음 날 접속하면 다시 뜸)"
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "Sheet.dc.html",
+    "Entry.dc.html",
+    "Picker.dc.html",
+    "Edit.dc.html",
+    "List.dc.html",
+    "ListDone.dc.html",
+    "ListAction.dc.html",
+    "Empty.dc.html",
+    "Welcome.dc.html",
+    "Backup.dc.html",
+    "BackupShare.dc.html",
+    "BackupSave.dc.html",
+    "Settings.dc.html",
+    "ContextMenu.dc.html",
+    "MoveDrag.dc.html",
+    "Paste.dc.html",
+    "ConfirmRepeat.dc.html",
+    "ConfirmDelete.dc.html",
+    "Restore.dc.html",
+    "OverdueMenu.dc.html",
+    "MainBannerClosed.dc.html"
+  ],
+  "notes": {
+    "title": {
+      "x": 0,
+      "y": -240,
+      "text": "TODO 웹 앱 목업: 파스텔 4색 시안 (확정 아님, Pantone 번호는 제3자 hex 근사치)",
+      "kind": "title1",
+      "maxW": 2270
+    },
+    "legend": {
+      "x": 0,
+      "y": 4800,
+      "w": 900,
+      "fill": "gray",
+      "size": "m",
+      "text": "일정 색 4가지 (글씨는 어두운 #1c1c1e)\n파랑 Pantone 13-4200 TCX Omphalodes #b5cedf\n빨강 Pantone 14-1714 TCX Quartz Pink #efa6aa\n노랑 Pantone 12-0720 TCX Mellow Yellow #f0dd9d\n회색 Pantone 14-4102 TCX Glacier Gray #c5c6c7\n중요 점·선택 테두리(진한 톤): 파랑 #1a3f70, 빨강 #a93844, 노랑 #8a6a00, 회색 #6b6e72\n강조 파랑: 애플 기본 #007aff (복구 확인 버튼 포함)"
+    }
+  },
+  "designSystems": []
+}

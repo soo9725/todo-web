@@ -27,3 +27,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# 테스트 결과, 마지막 검사 통과 시각
+.claude/.last-check
+test-results/
+playwright-report/
+coverage/

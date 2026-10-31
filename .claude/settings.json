@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(npx vitest *)",
+      "Bash(npx playwright test*)",
+      "PowerShell(npm run *)",
+      "PowerShell(npx vitest *)",
+      "PowerShell(npx playwright test*)"
+    ],
+    "ask": [
+      "Bash(npx playwright install*)",
+      "PowerShell(npx playwright install*)"
+    ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "bash",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/stop-check.mjs\"",
+            "timeout": 300,
+            "statusMessage": "npm run check 실행 중..."
+          }
+        ]
+      }
+    ]
+  }
+}

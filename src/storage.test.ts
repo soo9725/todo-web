@@ -281,3 +281,51 @@ describe('확정 규칙 7: 보관 쓰기 실패 알림(getLoadIssue)', () => {
     expect(getLoadIssue()).toBeNull()
   })
 })
+
+// 보관 키에 쓰는 것만 실패시킨다(원래 키를 고치거나 지우는 구현을 잡아내기 위해)
+const failArchiveWrite = () => {
+  const original = Storage.prototype.setItem
+  return vi.spyOn(Storage.prototype, 'setItem').mockImplementation(function (this: Storage, key: string, value: string) {
+    if (key === CORRUPT_KEY) throw new Error('quota')
+    return original.call(this, key, value)
+  })
+}
+
+describe('확정 규칙 1·7: 깨진 JSON의 보관 쓰기가 실패해도 원래 키의 원문은 그대로 남는다', () => {
+  afterEach(() => {
+    vi.restoreAllMocks()
+  })
+
+  it('확정 규칙 1·7: 깨진 JSON의 보관 쓰기가 실패하면 빈 데이터 반환 + archive-failed, 원래 키 유지', () => {
+    const raw = '{"version":1,"events":[{'
+    localStorage.setItem(DATA_KEY, raw)
+    failArchiveWrite()
+    expect(loadData()).toEqual(EMPTY)
+    expect(getLoadIssue()).toBe('archive-failed')
+    expect(localStorage.getItem(DATA_KEY)).toBe(raw)
+  })
+})
+
+describe('확정 규칙 6·7: 일정 모양 오류와 보관 쓰기 실패가 겹치는 경우', () => {
+  afterEach(() => {
+    vi.restoreAllMocks()
+  })
+
+  it.each(badEventCases)('확정 규칙 6·7: %s이고 보관 쓰기가 실패하면 예외 없이 빈 데이터 + archive-failed + 원래 키 원문 유지', (_name, bad) => {
+    const raw = JSON.stringify({ version: 1, events: [bad] })
+    localStorage.setItem(DATA_KEY, raw)
+    failArchiveWrite()
+    expect(loadData()).toEqual(EMPTY)
+    expect(getLoadIssue()).toBe('archive-failed')
+    expect(localStorage.getItem(DATA_KEY)).toBe(raw)
+  })
+
+  it('확정 규칙 6·7: 여러 일정 중 하나만 틀리고 보관 쓰기가 실패해도 빈 데이터 + archive-failed + 원래 키 원문 유지', () => {
+    const raw = JSON.stringify({ version: 1, events: [sampleEvent, { ...minimalValid, date: 20261201 }, minimalValid] })
+    localStorage.setItem(DATA_KEY, raw)
+    failArchiveWrite()
+    expect(loadData()).toEqual(EMPTY)
+    expect(getLoadIssue()).toBe('archive-failed')
+    expect(localStorage.getItem(DATA_KEY)).toBe(raw)
+  })
+})

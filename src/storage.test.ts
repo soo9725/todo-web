@@ -1,5 +1,5 @@
-import { beforeEach, describe, it, expect } from 'vitest'
-import { loadData, saveData } from './storage'
+import { afterEach, beforeEach, describe, it, expect, vi } from 'vitest'
+import { getLoadIssue, loadData, saveData } from './storage'
 import type { AppData, TodoEvent } from './types'
 
 const DATA_KEY = 'todo-web:data'
@@ -181,5 +181,103 @@ describe('확정 규칙 4: 과거/다른 버전 마이그레이션은 하지 않
     expect(loadData()).toEqual(EMPTY)
     expect(localStorage.getItem(CORRUPT_KEY)).toBe(raw)
     expect(localStorage.getItem(DATA_KEY)).toBe(raw)
+  })
+})
+
+const minimalValid = {
+  id: 'm1',
+  title: '최소',
+  memo: '',
+  date: '2026-12-01',
+  color: 'gray',
+  important: false,
+  overrides: {},
+}
+
+const badEventCases: Array<[string, unknown]> = [
+  ['events에 null이 섞임', null],
+  ['id가 없음', { ...minimalValid, id: undefined }],
+  ['id가 숫자', { ...minimalValid, id: 1 }],
+  ['date가 없음', { ...minimalValid, date: undefined }],
+  ['date가 숫자', { ...minimalValid, date: 20261201 }],
+  ['overrides가 없음', { ...minimalValid, overrides: undefined }],
+  ['overrides가 null', { ...minimalValid, overrides: null }],
+]
+
+describe('확정 규칙 6: 일정 필드 검증(불러올 때)', () => {
+  it.each(badEventCases)('확정 규칙 6: %s이면 손상으로 보고 원문 보관 + 빈 데이터 반환, 원래 키 유지', (_name, bad) => {
+    const raw = JSON.stringify({ version: 1, events: [bad] })
+    localStorage.setItem(DATA_KEY, raw)
+    expect(() => loadData()).not.toThrow()
+    expect(loadData()).toEqual(EMPTY)
+    expect(localStorage.getItem(CORRUPT_KEY)).toBe(raw)
+    expect(localStorage.getItem(DATA_KEY)).toBe(raw)
+  })
+
+  it('확정 규칙 6: 일정 여러 개 중 하나만 틀려도 전체가 손상이다', () => {
+    const raw = JSON.stringify({ version: 1, events: [sampleEvent, { ...minimalValid, id: 7 }, minimalValid] })
+    localStorage.setItem(DATA_KEY, raw)
+    expect(loadData()).toEqual(EMPTY)
+    expect(localStorage.getItem(CORRUPT_KEY)).toBe(raw)
+  })
+
+  it('확정 규칙 6: 최소 필드만 가진 올바른 일정은 손상이 아니고 그대로 통과한다', () => {
+    const raw = JSON.stringify({ version: 1, events: [minimalValid] })
+    localStorage.setItem(DATA_KEY, raw)
+    expect(loadData()).toEqual({ version: 1, events: [minimalValid] })
+    expect(localStorage.getItem(CORRUPT_KEY)).toBeNull()
+  })
+
+  it('확정 규칙 6: 선택 필드가 있는 올바른 일정도 보존된 채 통과한다', () => {
+    localStorage.setItem(DATA_KEY, JSON.stringify(sampleData))
+    expect(loadData()).toEqual(sampleData)
+    expect(localStorage.getItem(CORRUPT_KEY)).toBeNull()
+  })
+})
+
+describe('확정 규칙 7: 보관 쓰기 실패 알림(getLoadIssue)', () => {
+  afterEach(() => {
+    vi.restoreAllMocks()
+  })
+
+  const failWrites = () =>
+    vi.spyOn(Storage.prototype, 'setItem').mockImplementation(() => {
+      throw new Error('quota')
+    })
+
+  it('확정 규칙 7: 보관 쓰기가 실패해도 loadData는 예외 없이 빈 데이터를 돌려주고 getLoadIssue는 archive-failed', () => {
+    localStorage.setItem(DATA_KEY, '{"broken":')
+    failWrites()
+    expect(() => loadData()).not.toThrow()
+    expect(loadData()).toEqual(EMPTY)
+    expect(getLoadIssue()).toBe('archive-failed')
+  })
+
+  it('확정 규칙 7: 아무것도 저장된 적 없으면 getLoadIssue는 null', () => {
+    loadData()
+    expect(getLoadIssue()).toBeNull()
+  })
+
+  it('확정 규칙 7: 정상 데이터를 불러오면 getLoadIssue는 null', () => {
+    saveData(sampleData)
+    loadData()
+    expect(getLoadIssue()).toBeNull()
+  })
+
+  it('확정 규칙 7: 손상 데이터 보관에 성공하면 getLoadIssue는 null', () => {
+    localStorage.setItem(DATA_KEY, '{"broken":')
+    loadData()
+    expect(getLoadIssue()).toBeNull()
+  })
+
+  it('확정 규칙 7: 실패 뒤 정상 데이터를 다시 불러오면 이전 값이 지워져 null', () => {
+    localStorage.setItem(DATA_KEY, '{"broken":')
+    const spy = failWrites()
+    loadData()
+    expect(getLoadIssue()).toBe('archive-failed')
+    spy.mockRestore()
+    localStorage.setItem(DATA_KEY, JSON.stringify(sampleData))
+    loadData()
+    expect(getLoadIssue()).toBeNull()
   })
 })
